@@ -12,7 +12,7 @@ import { downloadCsv } from "components/CSVDownload/CSVDownload";
 // import ReactLoading from 'react-loading';
 import { sorghum_genes } from "./sorghum";
 import { foxtail_genes } from "./foxtail";
-import { disease } from "pages/Plant/disease";
+import { disease } from "pages/Hosts/disease";
 import { data } from "../Annotation/data";
 import test from "../Interactome/test.gif"
 const urlParams = new URLSearchParams(window.location.search);
@@ -294,6 +294,8 @@ export default class Results extends React.Component {
       // console.log(ddata)
     }
 
+    console.log(this.state)
+
     const csvButton = <Button type="primary" shape="round" icon={<DownloadOutlined />} size="large" onClick={() => downloadCsv(this.state.dResult, this.state.category)}> <b>Download CSV</b></Button>;
 
     if (this.state.List.length > 1 || this.state.dList.length > 1) {
@@ -331,7 +333,7 @@ export default class Results extends React.Component {
 
    
     
-   
+    
     if (this.state.List.length > 1) {
 
       results = (<>
@@ -420,7 +422,6 @@ export default class Results extends React.Component {
               </tr>
 
             )}
-
             {this.state.List.map((result, index) => (
               <tr key={index + 1} className={result.selected ? "selected" : ""}>
              

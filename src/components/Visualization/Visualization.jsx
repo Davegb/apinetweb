@@ -84,14 +84,14 @@ export const Visualization = React.memo(props => {
     mint: mints,
     intact: intacts,
     string:strings,
-    dip:dips,
-    arabihpi:arabihpis,
-    biogrid:biogrids,
-    go:gos,
-    phylo:phylos,
-    did3:did3s,
-    iddi:iddis,
-    domine:domines
+    dip: dips,
+    arabihpi: arabihpis,
+    biogrid: biogrids,
+    go: gos,
+    phylo: phylos,
+    did3: did3s,
+    iddi: iddis,
+    domine: domines
   }
   
   if (graphData.length && data.data ) {

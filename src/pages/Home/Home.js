@@ -51,35 +51,38 @@ export default class Home extends React.Component {
     </thead>
     <tbody>
     <tr>
-     <td> <i>Triticum aestivum</i> </td> <td> Wheat</td> <td>104,701</td><td>4895</td><td>139</td><td>5,833</td> <td><a href={`${env.BASE_URL}/plants/?id=1`}>Get interactions</a></td>
+     <td> <i>Homo sapiens</i> </td> <td>Human</td> <td>136,194</td><td>4895</td><td>139</td><td>5,833</td> <td><a href={`${env.BASE_URL}/hosts/?id=1`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Zea mays</i> </td> <td> Maize</td> <td>57,865</td><td>5983</td><td>139</td><td>3,425</td> <td><a href={`${env.BASE_URL}/plants/?id=2`}>Get interactions</a></td>
+     <td> <i>Canis lupus familiaris</i> </td> <td>Dog</td> <td>63,650</td><td>5983</td><td>139</td><td>3,425</td> <td><a href={`${env.BASE_URL}/hosts/?id=2`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Hordeum vulgare</i> </td> <td> Barley</td><td>35,531</td><td>4991</td><td>138</td><td>2,190</td> <td><a href={`${env.BASE_URL}/plants/?id=3`}>Get interactions</a></td>
+     <td> <i>Felis catus</i> </td> <td>Cat</td><td>71,463</td><td>4991</td><td>138</td><td>2,190</td> <td><a href={`${env.BASE_URL}/hosts/?id=3`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Oryza sativa</i> </td> <td> Rice</td> <td>38,210</td><td>2407</td><td>140</td><td>1,649</td> <td><a href={`${env.BASE_URL}/plants/?id=4`}>Get interactions</a></td>
+     <td> <i>Sus scrofa</i> </td> <td>Pig</td> <td>63,575</td><td>2407</td><td>140</td><td>1,649</td> <td><a href={`${env.BASE_URL}/hosts/?id=4`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Secale cereale</i> </td> <td> Rye</td> <td>33,636</td><td>4010</td><td>139</td><td>1,959</td><td><a href={`${env.BASE_URL}/plants/?id=5`}>Get interactions</a></td>
+     <td> <i>Bos taurus</i> </td> <td>Cattle</td> <td>64,939</td><td>4010</td><td>139</td><td>1,959</td><td><a href={`${env.BASE_URL}/hosts/?id=5`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Sorghum bicolor</i> </td> <td> Sorghum</td> <td>39,524</td><td>6279</td><td>139</td><td>2,186</td> <td><a href={`${env.BASE_URL}/plants/?id=6`}>Get interactions</a></td>
+     <td> <i>Gallus gallus</i> </td> <td>Chicken</td> <td>68,683</td><td>6279</td><td>139</td><td>2,186</td> <td><a href={`${env.BASE_URL}/hosts/?id=6`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Avena sativa</i> </td> <td> Oat</td> <td>133,621</td><td>2777</td><td>139</td><td>4,423</td> <td><a href={`${env.BASE_URL}/plants/?id=7`}>Get interactions</a></td>
+     <td> <i>Capra hircus</i> </td> <td>Goat</td> <td>42,653</td><td>2777</td><td>139</td><td>4,423</td> <td><a href={`${env.BASE_URL}/hosts/?id=7`}>Get interactions</a></td>
     </tr>
     <tr>
-     <td> <i>Setaria italica</i> </td> <td> Foxtail</td> <td>38,826</td><td>5948</td><td>139</td><td>1,886</td> <td><a href={`${env.BASE_URL}/plants/?id=8`}>Get interactions</a></td>
+     <td> <i>Ovis aries</i> </td> <td>Sheep</td> <td>76,701</td><td>5948</td><td>139</td><td>1,886</td> <td><a href={`${env.BASE_URL}/hosts/?id=8`}>Get interactions</a></td>
     </tr>  
     <tr>
-     <td> <i>Chenopodium quinoa</i> </td> <td>Quinoa</td> <td>53,699</td><td>5948</td><td>139</td><td>3,056</td> <td><a href={`${env.BASE_URL}/plants/?id=9`}>Get interactions</a></td>
+     <td> <i>Equus caballus</i> </td> <td>Horse</td> <td>60,900</td><td>5948</td><td>139</td><td>3,056</td> <td><a href={`${env.BASE_URL}/hosts/?id=9`}>Get interactions</a></td>
     </tr>   
     <tr>
-     <td> <i>Eleusine coracana</i> </td> <td>Ragi</td> <td>54,698</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/plants/?id=10`}>Get interactions</a></td>
-    </tr>                              
+     <td> <i>Bubalus bubalis</i> </td> <td>Water Buffalo</td> <td>64,378</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/hosts/?id=10`}>Get interactions</a></td>
+    </tr>                
+    <tr>
+     <td> <i>Apis melifera</i> </td> <td>Honey Bee</td> <td>23,471</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/hosts/?id=11`}>Get interactions</a></td>
+    </tr>                                   
   </tbody>
   </Table>
 
@@ -99,7 +102,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/hpidb.png" alt="" />
+            <img src="../images/hpidb.png" alt="" />
             <figcaption>HPIDB</figcaption>
           </a>
 
@@ -109,7 +112,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src='./images/intact.png' height='40px' width='80px' alt="" />
+            <img src='../images/intact.png' height='40px' width='80px' alt="" />
             <figcaption>IntAct</figcaption>
           </a>
 
@@ -119,7 +122,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/mint.png" alt="" />
+            <img src="../images/mint.png" alt="" />
             <figcaption>MINT</figcaption>
           </a>
 
@@ -129,7 +132,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/biogrid.png" alt="" />
+            <img src="../images/biogrid.png" alt="" />
             <figcaption>BioGRID</figcaption>
           </a>
           <a
@@ -138,7 +141,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/string.png" alt="" />
+            <img src="../images/string.png" alt="" />
             <figcaption>STRING</figcaption>
           </a>
           <a
@@ -147,7 +150,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/dip.png" alt="dip" />
+            <img src="../images/dip.png" alt="dip" />
             <figcaption>DIP</figcaption>
           </a>
           <a
@@ -156,7 +159,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/domine.png" alt="dip" />
+            <img src="../images/domine.png" alt="dip" />
             <figcaption>DOMINE</figcaption>
           </a>
           <a
@@ -165,7 +168,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/3did.png" alt="" />
+            <img src="../images/3did.png" alt="" />
             <figcaption>3did</figcaption>
           </a>
           <a
@@ -174,7 +177,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/uniprot.png" alt="" />
+            <img src="../images/uniprot.png" alt="" />
             <figcaption>UniProt</figcaption>
           </a>
           <a
@@ -183,7 +186,7 @@ export default class Home extends React.Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./images/ensembl.png" alt="" />
+            <img src="../images/ensembl.png" alt="" />
             <figcaption>ENSEMBL</figcaption>
           </a>
         </div>

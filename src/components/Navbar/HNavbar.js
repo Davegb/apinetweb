@@ -51,35 +51,38 @@ return(
               Home
             </Nav.Link>
             <NavDropdown title="Species" id="basic-nav-dropdown">
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=1`} className={'species' === this.props.active ? active : className}>
-                    <i>Triticum aestivum</i> (Wheat)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=1`} className={'species' === this.props.active ? active : className}>
+                    <i>Homo Sapiens</i> (Human)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=2`} className={'species' === this.props.active ? active : className}>
-                    <i>Zea mays</i> (Maize)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=2`} className={'species' === this.props.active ? active : className}>
+                    <i>Canis lupus familiaris</i> (Dog)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=3`} className={'species' === this.props.active ? active : className}>
-                    <i>Hordeum vulgare</i> (Barley)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=3`} className={'species' === this.props.active ? active : className}>
+                    <i>Felis catus</i> (Cat)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=4`} className={'species' === this.props.active ? active : className}>
-                    <i>Oryza sativa</i> (Rice)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=4`} className={'species' === this.props.active ? active : className}>
+                    <i>Sus scrofa</i> (Pig)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=5`} className={'species' === this.props.active ? active : className}>
-                    <i>Secale cerale</i> (Rye)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=5`} className={'species' === this.props.active ? active : className}>
+                    <i>Bos taurus</i> (Cattle)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=6`} className={'species' === this.props.active ? active : className}>
-                    <i>Sorghum bicolor</i> (Sorghum)
+                  <NavDropdown.Item href={`${env.BASE_URL}/?id=6`} className={'species' === this.props.active ? active : className}>
+                    <i>Gallus gallus</i> (Chicken)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=7`} className={'species' === this.props.active ? active : className}>
-                    <i>Avena sativa</i> (Oat)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=7`} className={'species' === this.props.active ? active : className}>
+                    <i>Capra hircus</i> (Goat)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=8`} className={'species' === this.props.active ? active : className}>
-                    <i>Setaria italica</i> (Foxtail)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=8`} className={'species' === this.props.active ? active : className}>
+                    <i>Ovis aries</i> (Sheep)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=9`} className={'species' === this.props.active ? active : className}>
-                    <i>Chenopodium quinoa</i> (Quinoa)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=9`} className={'species' === this.props.active ? active : className}>
+                    <i>Equus caballus</i> (Horse)
                   </NavDropdown.Item>
-                  <NavDropdown.Item href={`${env.BASE_URL}/plants/?id=10`} className={'species' === this.props.active ? active : className}>
-                    <i>Eleusine coracana</i> (Ragi)
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=10`} className={'species' === this.props.active ? active : className}>
+                    <i>Bubalus bubalis</i> (Water Buffalo)
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=11`} className={'species' === this.props.active ? active : className}>
+                    <i>Apis melifera</i> (Honey Bee)
                   </NavDropdown.Item>
 </NavDropdown>
             <Nav.Link href={`${env.BASE_URL}/datasets`} className={'datasets' === this.props.active ? active : className}>

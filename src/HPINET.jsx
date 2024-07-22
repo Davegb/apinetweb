@@ -5,7 +5,7 @@ import { env } from './env';
 import { HNavbar } from './components/Navbar/HNavbar';
 import Footer from 'components/Footer/Footer';
 import Home from './pages/Home/Home';
-import Plant from 'pages/Plant/Plant';
+import Hosts from 'pages/Hosts/Plant';
 import Interactome from 'pages/Interactome/Interactome';
 import Results from 'pages/Result/Results';
 import GO from './pages/Annotation/GO';
@@ -18,7 +18,7 @@ import Virulence from './pages/Annotation/Virulence';
 import Datasets from './pages/Datasets/Datasets';
 import Help from './pages/Help/Help';
 import ANNOT from 'pages/Annotation/Annot';
-import Search from 'pages/Plant/Search';
+import Search from 'pages/Hosts/Search';
 import {
     BrowserRouter as Router,
     Routes,
@@ -40,7 +40,7 @@ export class HPINET extends Component {
 			<HNavbar active={document.location.pathname.split('/')[this.state.baseUrlLen]}/>
 		   <Routes>
 			   <Route path={`${env.BASE_URL}/`} element={<Home />} />
-               <Route path={`${env.BASE_URL}/plants/`} element={<Plant />}/>
+               <Route path={`${env.BASE_URL}/hosts/`} element={<Hosts />}/>
                <Route path={`${env.BASE_URL}/interactome/`} element={<Interactome />}/>
                <Route path={`${env.BASE_URL}/results/`} element={<Results/>}/>
                <Route path={`${env.BASE_URL}/go/`}  element={<GO />}>

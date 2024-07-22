@@ -187,6 +187,7 @@ export default class Plant extends React.Component {
       geneSample = pathogenGeneSample
       genePlaceholder = 'Example NCBI-IDs: OAJ02192,OAJ01344,OAJ05837';
     }
+    console.log(disease)
     const ddata = disease[`${this.state.species}_${this.state.pathogen}`]
     // console.log(this.state.anotType)
     return (

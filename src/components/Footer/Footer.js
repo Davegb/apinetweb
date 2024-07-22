@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
         return(
             <div className="row flex-lg-row justify-content-center g-2 my-2">
             <p>
-              &copy; 2023 |&nbsp;{" "}
+              &copy; 2024 |&nbsp;{" "}
               <a
                 href="http://bioinfo.usu.edu"
                 target="_blank"

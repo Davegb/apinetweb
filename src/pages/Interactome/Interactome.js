@@ -6,7 +6,7 @@ import '../../scss/style.scss'
 import { InfoCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
 import { env } from "../../env";
-import { pathogen } from "../Plant/pathogen";
+import { pathogen } from "../Hosts/pathogen";
 import { host_genes } from "./genes";
 import { Modal, Form } from "react-bootstrap";
 import FileInput from '../../components/FileInput/FileInput';
@@ -272,8 +272,10 @@ export default class Interactome extends React.Component {
     let hspecies = "interolog_" + this.state.species
     let postBody = {
       category: this.state.status,
-      hspecies: hspecies,
-      pspecies: pspecies,
+      // hspecies: hspecies,
+      hspecies: 'Bos_taurus',
+      // pspecies: pspecies,
+      pspecies: 'Trichophyton_verrucosum',
       ids: pdata.idtype,
       genes: pdata.genes,
       stype: this.state.searchType,
