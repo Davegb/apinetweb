@@ -5,6 +5,7 @@
     "sname": "Homo sapiens",
     "pathogen": [
         "Trichophyton_rubrum",
+        "Trichophyton_mentagrophytes",
         "Candida_albicans",
         "Candida_auris",
         "Histoplasma_capsulatum",
@@ -90,6 +91,7 @@
         "Canine_adenovirus_1",
         "Canine_adenovirus_2",
         "Canine_coronavirus",
+        "Canine_parainfluenza_virus",
         "Canid_herpesvirus_1"
     ]
 },
@@ -142,6 +144,7 @@
         "Trichophyton_verrucosum",
         "Aspergillus_flavus",
         "Aspergillus_parasiticus",
+        "Claviceps_purpurea",
         "Fusarium_verticillioides_moniliforme",
         "Fusarium_proliferatum",
         "Fusarium_graminearum",
@@ -299,6 +302,7 @@
         "Basidiobolus_ranarum",
         "Conidiobolus_coronatus",
         "Trichophyton_equinum",
+        "Trichophyton_mentagrophytes",
         "Candida_albicans",
         "Fusarium_verticillioides_moniliforme",
         "Fusarium_proliferatum",
@@ -326,6 +330,38 @@
 },
 {
     "id": "10",
+    "name": "Domestic Yak",
+    "sname": "Bos grunniens",
+    "pathogen": [
+        "Trichophyton_verrucosum",
+        "Cryptosporidium_bovis",
+        "Cryptosporidium_andersoni",
+        "Cryptosporidium_parvum",
+        "Cryptosporidium_ryanae",
+        "Bacillus_anthracis",
+        "Brucella_abortus",
+        "Brucella_melitensis",
+        "Escherichia_coli",
+        "Mycoplasma_mycoides",
+        "Chlamydophila_psittaci",
+        "Staphylococcus_aureus",
+        "Streptococcus_agalactiae",
+        "Salmonella_typhimurium",
+        "Salmonella_dublin",
+        "Salmonella_newport",
+        "Clostridium_tetani",
+        "Mycobacterium_bovis",
+        "Foot_and_mouth_disease_virus",
+        "Epizootic_hemorrhagic_disease_virus_2",
+        "Lumpy_skin_disease_virus",
+        "Bovine_alphaherpesvirus_1",
+        "Rinderpest_virus",
+        "Bovine_viral_diarrhea_virus_1",
+        "Bovine_viral_diarrhea_virus_2"
+    ]
+},
+{
+    "id": "11",
     "name": "Water Buffalo",
     "sname": "Bubalus bubalis",
     "pathogen": [
@@ -355,7 +391,7 @@
     ]
 },
 {
-    "id": "11",
+    "id": "12",
     "name": "Honey Bee",
     "sname": "Apis melifera",
     "pathogen": [

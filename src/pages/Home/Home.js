@@ -78,10 +78,13 @@ export default class Home extends React.Component {
      <td> <i>Equus caballus</i> </td> <td>Horse</td> <td>60,900</td><td>5948</td><td>139</td><td>3,056</td> <td><a href={`${env.BASE_URL}/hosts/?id=9`}>Get interactions</a></td>
     </tr>   
     <tr>
-     <td> <i>Bubalus bubalis</i> </td> <td>Water Buffalo</td> <td>64,378</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/hosts/?id=10`}>Get interactions</a></td>
+     <td> <i>Bos grunniens</i> </td> <td>Domestic Yak</td> <td>64,939</td><td>4010</td><td>139</td><td>1,959</td><td><a href={`${env.BASE_URL}/hosts/?id=10`}>Get interactions</a></td>
+    </tr>
+    <tr>
+     <td> <i>Bubalus bubalis</i> </td> <td>Water Buffalo</td> <td>64,378</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/hosts/?id=11`}>Get interactions</a></td>
     </tr>                
     <tr>
-     <td> <i>Apis melifera</i> </td> <td>Honey Bee</td> <td>23,471</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/hosts/?id=11`}>Get interactions</a></td>
+     <td> <i>Apis melifera</i> </td> <td>Honey Bee</td> <td>23,471</td><td>5948</td><td>139</td><td>2,611</td> <td><a href={`${env.BASE_URL}/hosts/?id=12`}>Get interactions</a></td>
     </tr>                                   
   </tbody>
   </Table>

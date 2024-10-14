@@ -4,6 +4,7 @@ import '../../scss/style.scss';
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import Table from "react-bootstrap/Table";
+import hosts from '../Hosts/plants.json';
 import { Divider } from "antd";
 import { env } from '../../env';
 import {data} from "./data";
@@ -43,6 +44,8 @@ export default class GO extends React.Component {
   };
 
   fetchResults() {
+    if (sptype == "host")
+      species = hosts.find(item => item.name === species).sname.replaceAll(' ', '_').replaceAll('.', '').replaceAll('(', '_').replaceAll(')', '_')
     axios
       .get(
         `${env.BACKEND}/api/go/?species=${species}&sptype=${sptype}&page=${this.state.currentPage}&size=${this.state.perPage}`

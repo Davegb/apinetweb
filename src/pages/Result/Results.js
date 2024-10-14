@@ -5,6 +5,7 @@ import ReactPaginate from "react-paginate";
 import "./Results.scss";
 import '../../scss/components/buttons.scss';
 import '../../scss/style.scss'
+import hosts from '../Hosts/plants.json';
 import { Divider, Button } from "antd";
 import { DownloadOutlined } from '@ant-design/icons';
 import { env } from 'env';
@@ -24,7 +25,7 @@ const pdata = JSON.parse(localStorage.getItem("param"));
 // console.log(pdata)
 // const domsp = `${pdata.species}_${pdata.pathogen}`
 
-
+var onlyOnce = false;
 
 
 let category;
@@ -100,11 +101,12 @@ export default class Results extends React.Component {
   closeModel = () => this.setState({ isOpen: false });
  
   fetchResults() {
-  
-    // console.log(this.state.dgenes)
+    
     if (category === 'domain') {
+      let hspecies = hosts.find(item => item.name === pdata.species).sname.replaceAll(' ', '_').replaceAll('.', '').replaceAll('(', '_').replaceAll(')', '_')
       const postBody = {
-        species: `${pdata.species}_${pdata.pathogen}`,
+
+        species: `${hspecies}_${pdata.pathogen}`,
         page: this.state.currentPage,
         size: this.state.perPage,
         genes: this.state.dgenes,
@@ -112,17 +114,17 @@ export default class Results extends React.Component {
         intdb: pdata.domdb,
         keyword:pdata.keyword,
         searchType:pdata.searchType
-  
       }
       // console.log(postBody)
       this.openModel();
       axios
         .post(
-          `${env.BACKEND}/api/domain_results/`, postBody, { crossDomain: true }
+          `${env.BACKEND}/api/domain_results/?results=${tdata}&page=${this.state.currentPage}&size=${this.state.perPage}`
         )
         .then((res) => {
-          this.closeModel();
           const dList = res.data.results;
+          console.log("AAA")
+          console.log(res.data)
           
           const dl = Math.ceil(res.data.total / this.state.perPage);
           console.log(res.data)
@@ -135,6 +137,11 @@ export default class Results extends React.Component {
             dResult: res.data.results,
             resultid: res.data.resultid
           });
+
+          if (tdata === "Error" && !onlyOnce) {
+            alert("There was an error processing your submission.");
+            onlyOnce = true;
+          }
         }).catch(e => {
           console.log(e);
         });
@@ -146,8 +153,10 @@ export default class Results extends React.Component {
         )
         .then((res) => {
           const List = res.data.results;
+          console.log("BBB")
+          console.log(res.data)
           const dl = Math.ceil(res.data.total / this.state.perPage);
-          // console.log(res.data)
+          
           this.setState({
             List,
             pageCount: dl,
@@ -156,6 +165,11 @@ export default class Results extends React.Component {
             pathogenp: res.data.pathogencount,
             dResult: res.data.results
           });
+
+          if (tdata === "Error" && !onlyOnce) {
+            alert("There was an error processing your submission.");
+            onlyOnce = true;
+          }
         });
     }
   }
@@ -216,11 +230,8 @@ export default class Results extends React.Component {
   // }
 
   componentDidMount() {
-
     this.fetchResults();
-    // this.downloadResults();
-
-
+    // this.downloadResults()
   }
 
   handlePageClick = (e) => {
@@ -400,8 +411,6 @@ export default class Results extends React.Component {
                   <th>Pathogen</th>
                   <th>Annotation</th>
                   <th>Score</th>
-                  <th>Host Pattern</th>
-                  <th>Pathogen Pattern</th>
                 </>
               )}
             </tr>
@@ -720,11 +729,10 @@ export default class Results extends React.Component {
                 {this.state.category === 'phylo' && (
                   <>
                     <td>{parseFloat(result["Score"]).toFixed(2)}</td>
-                    <td className="tdd">{result["Host_Pattern"].match(/.{1,10}/g)}</td>
-                    <td>{result["Pathogen_Pattern"]}</td>
+                    {/* <td className="tdd">{result["Host_Pattern"].match(/.{1,10}/g)}</td>
+                    <td>{result["Pathogen_Pattern"]}</td> */}
                   </>
                 )}
-
 
               </tr>
             ))}
@@ -871,7 +879,6 @@ export default class Results extends React.Component {
           </>
 
         )}
-
         {this.state.category === 'domain' && (
 
           <>

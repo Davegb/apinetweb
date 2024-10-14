@@ -16,9 +16,6 @@ const NodeTypeDict = {
 }
 
 
-
-
-
 class VisPage extends Component {
   constructor(props) {
     super(props);

@@ -71,7 +71,7 @@ export const Visualization = React.memo(props => {
   let dips = [];
   let biogrids =[];
   let strings = [];
-  let arabihpis = [];
+  let virhostnets = [];
   let gos =[];
   let phylos =[];
   let did3s = [];
@@ -85,7 +85,7 @@ export const Visualization = React.memo(props => {
     intact: intacts,
     string:strings,
     dip: dips,
-    arabihpi: arabihpis,
+    virhostnet: virhostnets,
     biogrid: biogrids,
     go: gos,
     phylo: phylos,
@@ -142,7 +142,6 @@ export const Visualization = React.memo(props => {
         return {data: { source: item.Host_Protein, target: item.Pathogen_Protein, id: id, Pathogen_Protein: item.Pathogen_Protein, Host_Protein: item.Host_Protein} };
       
     });
-   
 
     uniqueHost_Proteins = Array.from(new Set(useData.map(item => {return item.Host_Protein})));
 
@@ -183,8 +182,8 @@ const opts = {
     {
       selector: 'node',
       style: {
-        width: function(elements){ return Math.max(1, Math.ceil(elements.degree()/10))*5 ; },
-        height: function(elements){ return Math.max(1, Math.ceil(elements.degree()/10)) *5; },
+        width: function(element){ return element.data('className') === 'pat' ? 25 : 15;},
+        height: function(element){ return element.data('className') === 'pat' ? 25 : 15;},
         content: "data(label)",
         "font-size": "2px"
       }
@@ -268,7 +267,7 @@ const opts = {
               for (let id of biogrids) {
                 cyRef.$(id).style({'line-color': '#6ca6bc'});
               }
-              for (let id of arabihpis) {
+              for (let id of virhostnets) {
                 cyRef.$(id).style({'line-color': '#d6d978'});
               }
             }}
@@ -396,7 +395,7 @@ const opts = {
                 <FaCircle />
               </IconContext.Provider>
 
-              <span className="legend-text">ArabiHPI</span>
+              <span className="legend-text">VirHostNet</span>
             </Col>
             </Row>
         </Col>
@@ -451,7 +450,7 @@ const opts = {
          </Row>
 
          </Col>
-        )};        
+        )}
       </Row>
     </div>
   );

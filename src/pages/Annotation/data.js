@@ -3,6 +3,7 @@ export const data = {
     Dog: "Canis lupus familiaris",
     Cat: "Felis catus",
     Pig: "Sus scrofa",
+    Domestic_Yak: "Bos grunniens",
     Cattle: "Bos taurus",
     Chicken: "Gallus gallus",
     Goat: "Capra hircus",

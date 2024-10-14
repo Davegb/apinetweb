@@ -5,6 +5,7 @@ import '../../scss/components/buttons.scss';
 import '../../scss/style.scss'
 import { InfoCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
+import hosts from '../Hosts/plants.json';
 import { env } from "../../env";
 import { pathogen } from "../Hosts/pathogen";
 import { host_genes } from "./genes";
@@ -13,7 +14,6 @@ import FileInput from '../../components/FileInput/FileInput';
 import test from './test.gif';
 
 const pdata = JSON.parse(localStorage.getItem("param"));
-// console.log(pdata)
 
 const urlParams = new URLSearchParams(window.location.search);
 
@@ -23,11 +23,10 @@ const mpath = urlParams.get("pathogen");
 const CheckboxGroup = Checkbox.Group;
 const interologOptions = [
   "HPIDB",
-  "DIP",
   "MINT",
   "BioGRID",
   "IntAct",
-  "Arabihpi",
+  "VirHostNet",
 ];
 
 const domainOptions = ["3DID", "IDDI", "DOMINE"];
@@ -268,14 +267,12 @@ export default class Interactome extends React.Component {
     });
 
 
-    let pspecies = "interolog_" + this.state.pathogen
-    let hspecies = "interolog_" + this.state.species
+    let pspecies = this.state.pathogen
+    let hspecies = hosts.find(item => item.name === this.state.species).sname.replaceAll(' ', '_').replaceAll('.', '').replaceAll('(', '_').replaceAll(')', '_')
     let postBody = {
       category: this.state.status,
-      // hspecies: hspecies,
-      hspecies: 'Bos_taurus',
-      // pspecies: pspecies,
-      pspecies: 'Trichophyton_verrucosum',
+      hspecies: hspecies,
+      pspecies: pspecies,
       ids: pdata.idtype,
       genes: pdata.genes,
       stype: this.state.searchType,
@@ -301,9 +298,10 @@ export default class Interactome extends React.Component {
     }
     if (this.state.status === 'gosim') {
       this.openModel();
+      hspecies = hosts.find(item => item.name === this.state.species).sname.replaceAll(' ', '_').replaceAll('.', '').replaceAll('(', '_').replaceAll(')', '_')
       let postBody = {
         category: this.state.status,
-        hspecies: this.state.species,
+        hspecies: hspecies,
         pspecies: this.state.pathogen,
         host_genes: this.state.hgenes,
         pathogen_genes: this.state.pgenes,
@@ -330,9 +328,10 @@ export default class Interactome extends React.Component {
     }
     if (this.state.status === 'phylo') {
       this.openModel();
+      hspecies = hosts.find(item => item.name === this.state.species).sname.replaceAll(' ', '_').replaceAll('.', '').replaceAll('(', '_').replaceAll(')', '_')
       let postBody = {
         category: this.state.status,
-        hspecies: this.state.species,
+        hspecies: hspecies,
         pspecies: this.state.pathogen,
         host_genes: this.state.hgenes,
         pathogen_genes: this.state.pgenes,
@@ -354,6 +353,7 @@ export default class Interactome extends React.Component {
         )
         .then((res) => {
           const rid = res.data;
+          console.log('RID ' + rid)
           // console.log(rid);
           this.setState({ resultid: rid });
 
@@ -364,9 +364,6 @@ export default class Interactome extends React.Component {
 
     }
     if (this.state.status === 'interolog') {
-     
-      
-
       this.openModel();
       axios
         .post(
@@ -451,10 +448,10 @@ export default class Interactome extends React.Component {
         searchType:pdata.searchType
       })
     );
-    let genePlaceholder = 'Example ENSEMBL-IDs: TraesCS6A02G059000, TraesCS5A02G216600, TraesCS2A02G417800';
+    let genePlaceholder = 'Example NCBI-IDs: NP_001001141.1,NP_001001158.1,NP_001001441.1,NP_001007811.2,XP_059737260.1';
     // let geneSample = 'TraesCS6A02G059000, TraesCS5A02G216600, TraesCS2A02G417800, TraesCS7A02G408100, TraesCS7A02G434500, TraesCS2A02G203000, TraesCS7A02G178900, TraesCS4B02G350800';
-    let geneSample = host_genes['Wheat']
-    let pathogenGeneSample = host_genes['tindica']
+    let geneSample = host_genes['Cattle']
+    let pathogenGeneSample = host_genes['Babortus']
     // if (this.state.idType === 'pathogen') {
     //   genePlaceholder = 'Example NCBI-IDs: OAJ02622, OAI99867, OAJ05030';
     //   geneSample = 'OAJ02622, OAI99867, OAJ05030, OAI99147';

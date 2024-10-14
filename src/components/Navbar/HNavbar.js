@@ -52,7 +52,7 @@ return(
             </Nav.Link>
             <NavDropdown title="Species" id="basic-nav-dropdown">
                   <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=1`} className={'species' === this.props.active ? active : className}>
-                    <i>Homo Sapiens</i> (Human)
+                    <i>Homo sapiens</i> (Human)
                   </NavDropdown.Item>
                   <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=2`} className={'species' === this.props.active ? active : className}>
                     <i>Canis lupus familiaris</i> (Dog)
@@ -79,9 +79,12 @@ return(
                     <i>Equus caballus</i> (Horse)
                   </NavDropdown.Item>
                   <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=10`} className={'species' === this.props.active ? active : className}>
-                    <i>Bubalus bubalis</i> (Water Buffalo)
+                    <i>Bos grunniens</i> (Domestic yak)
                   </NavDropdown.Item>
                   <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=11`} className={'species' === this.props.active ? active : className}>
+                    <i>Bubalus bubalis</i> (Water Buffalo)
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href={`${env.BASE_URL}/hosts/?id=12`} className={'species' === this.props.active ? active : className}>
                     <i>Apis melifera</i> (Honey Bee)
                   </NavDropdown.Item>
 </NavDropdown>

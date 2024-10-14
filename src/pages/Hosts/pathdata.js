@@ -11,6 +11,7 @@ export const fungi = [
     "Candida_albicans",
     "Candida_auris",
     "Cladophialophora_bantiana",
+    "Claviceps_purpurea",
     "Coccidioides_immitis",
     "Conidiobolus_coronatus",
     "Cryptococcus_gattii",
@@ -30,6 +31,7 @@ export const fungi = [
     "Trichophyton_equinum",
     "Trichophyton_rubrum",
     "Trichophyton_verrucosum",
+    "Trichophyton_mentagrophytes",
 ]
 
 export const bacteria = [
@@ -132,6 +134,7 @@ export const virus = [
     "Canine_adenovirus_1",
     "Canine_adenovirus_2",
     "Canine_coronavirus",
+    "Canine_parainfluenza_virus",
     "Canine_parvovirus",
     "Caprine_arthritis_encephalitis_virus",
     "Chronic_bee_paralysis_virus",

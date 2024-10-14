@@ -176,16 +176,16 @@ export default class Plant extends React.Component {
 
     let genePlaceholder 
     let geneSample;
-    let hostgeneSample = host_genes['Wheat']
-    let pathogenGeneSample = host_genes['tindica']
+    let hostgeneSample = host_genes['Cattle']
+    let pathogenGeneSample = host_genes['Babortus']
 
     if (this.state.idtype === 'host') {
       geneSample = hostgeneSample
-      genePlaceholder = 'Example ENSEMBL-IDs: TraesCS6A02G059000, TraesCS5A02G216600, TraesCS2A02G417800';
+      genePlaceholder = 'Example NCBI-IDs: NP_001001141.1,NP_001001158.1,NP_001001441.1,NP_001007811.2,XP_059737260.1';
     }
     else {
       geneSample = pathogenGeneSample
-      genePlaceholder = 'Example NCBI-IDs: OAJ02192,OAJ01344,OAJ05837';
+      genePlaceholder = 'Example NCBI-IDs: WP_002963495.1,WP_002963560.1,WP_002963614.1,WP_002963758.1';
     }
     console.log(disease)
     const ddata = disease[`${this.state.species}_${this.state.pathogen}`]
